@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Homework 4 - Networks</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+  </head>
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Homework 4</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#network1">Network</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#dataset">About Dataset</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#questions">Questions</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#network2">Network II</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header -->
+    <header class="masthead bg-primary text-white text-center">
+      <div class="container" id="network1">
+        <h1 class="text-uppercase mb-0">Network</h1>
+        <hr class="star-light">
+        <img src="img/graph.png" alt="network-graph shown here">
+      </div>
+    </header>
+    <!-- dataset description Section -->
+    <section class="portfolio" id="dataset">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary">Dataset Description</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <p class="lead">The Network shown above is the Word Adjacency Network (WAN) of the frequently occuring common nouns and adjectives in the Charles Dickens' magnum opus, David Copperfield. It is a directed network consisting of 112 nodes and 426 directed edges.</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <p class="lead">Each node represents a word and is either a noun or an adjective. Adjective nodes (0.0 in the dataset) are coloured in pink and the common nouns (1.0 in the dataset) in green. I have utilized the Force Atlas 2 Layout with Prevent Overlap checked. The size of the nodes are linearly porportional to their degree.</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <p class="lead">The network below utilizes the Yifan Hu proportional layout and the node sizes are linearly dependent on eigen vector centrality. Node hue ranking (brightness of the node) is also based on the eigen vector centrality. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- questions Section -->
+    <section class="bg-primary text-white mb-0" id="questions">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-white mb-0">Questions</h2>
+        <hr class="star-light mb-5">
+          <div class="ml-auto">
+            <p class="lead text-center ">a) Do you find communities (modularity) in the graph?</p>
+            <p class="lead text-center">Yes. There are 6 communities in the graph. Modularity was calculated as 0.294 (with and without resolution). Modularity is a measure that defines how likely the community structure
+found is created at random.
+            </p>
+          </div>
+          <div class="ml-auto">
+            <p class="lead text-center ">b) What is the average degree centrality? What is the implication for this network?</p>
+            <p class="lead text-center">Degree centrality ranks nodes based on their number of connections. The higher the number of connections, the higher the degree centrality of that node. The Average Degree Centrality of the graph is 3.795.</p>
+            <p class="lead text-center ">
+              In this network, the words 'little','other','old' and 'good' are the wods with the four maximum number of connections. Here ,we note that the top 20 words with high degree centrality are adjectives and 'child' is the common noun with the highest degree centrality among the common nouns. Since adjectives can be used with a number of proper and common nouns, it is natural that adjectives have high degree centrality.
+            </p>
+          </div>
+          <div class="ml-auto">
+            <p class="lead text-center ">c) What is the average betweenness centrality? What is the implication for this network?</p>
+            <p class="lead text-center">Betweenness Centrality of a node measures how important it is in connecting other nodes i.e., it is the total number of shortest paths between other nodes in network which pass through the current node. The average Path length of this network is 2.5985937022317334 and the average betweenness centrality is 46.68750003 </p>
+            <p class="lead text-center ">
+              In this network, the words 'little', 'other', 'good' and 'new' are the 4 words which have the four maximum number of shortest paths passing through them. In betweenness centrality as well the top words are all adjectives as they are more widely used as such have more connections, which help them feature in the shortest paths to many nodes. Common nouns cannot be each others neighbours but adjectives can.
+            </p>
+          </div>
+          <div class="ml-auto">
+            <p class="lead text-center ">d) What is the average Eigenvector centrality? What is the implication for this network?</p>
+            <p class="lead text-center">Eigenvector centrality  of a node tries to generalize degree centrality by incorporating the importance of its neighboring nodes. The average eigen vector centrality is 0.08853825
+</p>
+            <p class="lead text-center ">
+              In this network, the words 'old', 'man', 'little' and 'agreeable' are the 4 words with maximum number of important neighbours. Here we find the first common noun (man) which features among the top 4 of all the measures seen so far. Man is a word which can take a large variety of adjectives more than many other common nouns found in the english language
+            </p>
+          </div>
+      </div>
+    </section>
+    <!-- network 2 Section -->
+    <section id="network2">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Network II</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class=" mx-auto">
+            <img src="img/eigenVector.png" alt="network-graph-eigen-vector shown here">
+          </div>
+          <div class=" mx-auto">
+            <p class="lead text-center "> Colour Scale</p>
+            <center>
+            <img src="img/rank-scale.png" alt="colour-scale-shown-here">
+          </center>
+            <p class="lead text-center "> Node Size Scale<br>min=10, max =150</p>
+            <div>
+              <div>
+                <center>
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="1" fill="blue" />
+              </svg>
+            </center>
+              </div>
+              <div>
+                <center>
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="53" r="5" fill="blue" />
+              </svg>
+              </center>
+            </div>
+            <div>
+              <center>
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="60" r="7.5" fill="blue" />
+              </svg>
+              </center>
+            </div>
+            <div>
+              <center>
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="69" r="15" fill="blue" />
+              </svg>
+              </center>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <p class="lead">
+          Dataset Citation:
+        </p>
+        <p class="lead">
+          1. E. J. Newman, Phys. Rev. E 74, 036104 (2006).
+        </p>
+        <!-- <small>Copyright &copy;</small> -->
+      </div>
+    </div>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+
+  </body>
+</html>
